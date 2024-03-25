@@ -8,16 +8,24 @@ export default function SideNav() {
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <Link
-        className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-20"
+        className="mb-2 flex h-13 items-end justify-start rounded-md bg-blue-600 p-4 md:h-13"
         href="/dashboard"
       >
-        <div className="w-32 text-white md:w-40">
+        <div className="w-32 text-white md:w-20">
           {/* <AcmeLogo /> */}
           <Image
+            src="/smalllogo.png"
+            width={100}
+            height={100}
+            className="hidden md:block"
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <Image
             src="/logo.png"
-            width={300}
-            height={500}
-            alt="Picture of the author"
+            width={1000}
+            height={600}
+            className="block md:hidden"
+            alt="Screenshot of the dashboard project showing mobile version"
           />
         </div>
       </Link>
@@ -27,7 +35,7 @@ export default function SideNav() {
         <form>
           <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
             <PowerIcon className="w-6" />
-            <div className="hidden md:block">Sign Out</div>
+            {/* <div className="hidden md:block">Sign Out</div> */}
           </button>
         </form>
       </div>
